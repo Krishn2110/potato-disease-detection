@@ -2,7 +2,8 @@ import { useMemo, useState } from 'react'
 import heroImg from './assets/hero.png'
 import './App.css'
 
-const API_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:8000/predict'
+const API_URL = (import.meta.env.VITE_API_URL ?? 'http://localhost:8000/predict').replace(/\/$/, '')
+const PREDICT_URL = API_URL.endsWith('/predict') ? API_URL : `${API_URL}/predict`
 
 const CLASS_NAMES = ['Early Blight', 'Late Blight', 'Healthy']
 
@@ -140,7 +141,7 @@ function App() {
     setError('')
 
     try {
-      const response = await fetch(API_URL, {
+      const response = await fetch(PREDICT_URL, {
         method: 'POST',
         body: formData,
       })

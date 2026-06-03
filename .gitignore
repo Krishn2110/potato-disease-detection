@@ -1,0 +1,21 @@
+# Dependencies
+Frontend/node_modules/
+PotatoDiseaseApp/node_modules/
+
+# Expo
+.expo/
+.expo-shared/
+
+# Build files
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+
+# Android
+*.apk
+
+# Logs
+npm-debug.log*

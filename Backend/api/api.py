@@ -21,6 +21,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get('/')
+async def root():
+    return {
+        "status": "ok",
+        "message": "Potato disease detection API is running",
+        "predict_endpoint": "/predict"
+    }
+
 @app.get('/ping')
 async def ping():
     return 'Hello'

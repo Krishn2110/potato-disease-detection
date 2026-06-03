@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "Potato Disease App",
+    "slug": "potato-disease-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#f5f7f1"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#f5f7f1"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
